@@ -77,20 +77,20 @@ def get_frequent_itemsets(min_threshold, candidates, transactions):
 	Find frequent patterns using Apriori algorithm
 """
 def apriori(min_threshold, transactions):
-	frequent_patterns = set()
+	frequent_patterns = []
 	L = dict() # Frequent itemset of size k
 	C = dict() # Candidate itemset of size k
 	
 	k = 1
 	L[k] = get_1_frequent_itemsets(int(min_threshold), transactions)
-	frequent_patterns = frequent_patterns.union(L[k])
+	frequent_patterns = frequent_patterns + L[k]
 #	print "L[", k, "]: ", L[k]
 	while len(L[k]) != 0:
 		C[k+1] = generate_next_candidates(L[k])
 #		print "C[", k+1, "]: ", C[k+1]
 		L[k+1] = get_frequent_itemsets(int(min_threshold), C[k+1], transactions)
 #		print "L[", k+1, "]: ", L[k+1]
-		frequent_patterns = frequent_patterns.union(L[k+1])
+		frequent_patterns = frequent_patterns + L[k+1]
 		k += 1
 		
 	return list(frequent_patterns)
@@ -101,11 +101,11 @@ def apriori(min_threshold, transactions):
 min_threshold = sys.argv[1];
 filename = sys.argv[2];
 
-print 'Min Threshold : ', min_threshold
-print 'Input File    : ', filename
+print 'Min Threshold     : ', min_threshold
+print 'Input File        : ', filename
 
-print '\nFinding all frequent itemsets in the file...\n'
+print '\nFinding all frequent patterns in the file...\n'
 
 transactions = parse_file(filename);
-print 'Transaction DB: ', transactions
-print 'Frequent items: ', apriori(min_threshold, transactions)
+print 'Transaction DB    : ', transactions
+print 'Frequent patterns : ', apriori(min_threshold, transactions)
