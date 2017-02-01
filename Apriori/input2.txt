@@ -1,0 +1,6 @@
+i,j,k,p,s,t
+r,s,t
+k,p,q,r,t
+i,p,q,r
+p,q,r,s
+j,r,s,t

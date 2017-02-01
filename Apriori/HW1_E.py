@@ -107,5 +107,5 @@ print 'Input File        : ', filename
 print '\nFinding all frequent patterns in the file...\n'
 
 transactions = parse_file(filename);
-print 'Transaction DB    : ', transactions
+# print 'Transaction DB    : ', transactions
 print 'Frequent patterns : ', apriori(min_threshold, transactions)
