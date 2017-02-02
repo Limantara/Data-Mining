@@ -8,11 +8,11 @@ How to run this program (HW1_E.py):
 
    An example output to the above command is: 
        Min Threshold     :  2
-			 Input File        :  input.txt
+       Input File        :  input.txt
 
-			 Finding all frequent patterns in the file...
+       Finding all frequent patterns in the file...
 
-			 Frequent patterns :  ['a', 'c', 'b', 'p', 'r', 'ac', 'ab', 'cb', 'cr', 'acb']
+       Frequent patterns :  ['a', 'c', 'b', 'p', 'r', 'ac', 'ab', 'cb', 'cr', 'acb']
 
 2. The input file (in this case: input.txt) should follow the following format:
 	     a) each line represents one transaction
@@ -20,9 +20,9 @@ How to run this program (HW1_E.py):
 
 	 An example of the input.txt would be the following:
 	     c,r,a
-			 p,b
-			 r,c,b
-			 p,c,a
-			 a,b,s,c
-			 t,a,b,c
+	     p,b
+	     r,c,b
+	     p,c,a
+	     a,b,s,c
+	     t,a,b,c
 
