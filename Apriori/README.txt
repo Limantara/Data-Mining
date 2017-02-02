@@ -18,7 +18,7 @@ How to run this program (HW1_E.py):
 	     a) each line represents one transaction
 	     b) each line has comma separated items, which represent all the items in a particular transaction
 
-	 An example of the input.txt would be the following:
+       An example of the input.txt would be the following:
 	     c,r,a
 	     p,b
 	     r,c,b
